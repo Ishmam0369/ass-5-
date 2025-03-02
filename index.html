@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dev Board</title>
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+
+<link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.24/dist/full.min.css" rel="stylesheet" type="text/css" />
+<script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body style="background-color:lightcyan;" id="main">
+    <!-- nav -->
+    <header class="pt-10">
+        <nav class="flex justify-between px-5 py-3 mx-26 my-2 bg-white">
+            <div class="flex gap-3">
+                <img src="A5-Dev-Board/assets/logo.png" alt="" class="w-auto">
+                <h2 class="pt-3 text-4xl text-black">Dev<span class="font-bold">Board</span></h2>
+            </div>
+            <div class="flex gap-12">
+                <div class="bg-stone-200 flex gap-2 p-2 rounded-lg">
+                    <img style="width: 32px;height: 32px;" src="A5-Dev-Board/assets/checkbox.png" alt="">
+                    <h1 id="task-increase" class="pt-1 text-black pr-2">0</h1>
+                </div>
+                <button id="theme-changer" class="pt-1 btn-primary bg-white border-none">
+                    <img src="A5-Dev-Board/Group 8.png" alt="">
+                </button>
+            </div>
+        </nav>
+    </header>
+    <section class="grid grid-cols-6 ">
+    <section  class=" ml-26 my-10 bg-white pt-4 rounded-lg col-span-4">
+        <!-- upper part -->
+        <div class="grid grid-cols-4 gap-6 ml-3 px-5">
+            <div class="flex gap-6 p-6 my-5   rounded-lg " ; style="background-color: lightcyan;">
+                <div class="pt-5 bg-white rounded-[100%] px-3">
+                    <img class="w-10 h-8 " src="A5-Dev-Board/assets/checkbox.png" alt="">
+                </div>
+                <div >
+                    <h1 class="text-stone-600">Task Assigned</h1>
+                    <h2 id="task-decrease" class="font-bold text-black">06</h2>
+                </div>
+            </div>
+            <div id="new-window" class="cursor-pointer bg-blue-400 flex gap-6 my-5 rounded-lg col-span-2  ">
+                <div class="px-5 pt-3">
+                    <img src="A5-Dev-Board/assets/board.png" alt="">
+                </div>
+                <div class="text-white pt-4 text-2xl">
+                    Discover Something <br> New Today!
+                </div> 
+            </div>
+            <div class="flex gap-6 p-6 my-5 rounded-lg mr-3 " ; style="background-color: lightcyan;">
+                <div class="pt-5 bg-white rounded-[100%] px-3">
+                    <img class="w-8 h-8 " src="A5-Dev-Board/assets/calender.png" alt="">
+                </div>
+                <div id="front-date">
+                    <h1 class="text-stone-600 "><br><span class="font-bold text-black"></span></h1>
+                    
+                </div>
+            </div>
+        </div>
+        <!-- lower part -->
+        <div class="grid grid-cols-3 gap-4 pb-10  px-8">
+            <div  class="rounded-lg pl-4" style="background-color:lightcyan; padding-top: 20px;" >
+                
+                <h1 class="text-black bg-white w-28 pl-4 ml-4 pr-4 text-lg py-2 rounded-lg">
+                    ShopEase
+                </h1>
+                <h1 id="low-1" class="text-black text-xl ml-4 pt-3">
+                    Fix Mobile Button Issue 
+                </h1>
+                
+                <div class="collapse bg-base-200 bg-white mt-5 w-60  ">
+                    <input type="checkbox" />
+                    <div class="collapse-title text-stone-700">Debug using Chrome DevTools, check for overlap...</div>
+                    <div class="collapse-content text-stone-700">
+                      <p>Debug using Chrome DevTools, check for overlapping elements, and ensure onClick works properly
+                        and ensure onClick works properly</p>
+                    </div>
+                  </div>
+                <div class="flex gap-8 my-5 ml-4">
+                        <div>
+                            <span class="text-black">deadline</span> <br> <span class="font-bold text-black">28 July,2019</span>
+                        </div>
+                        <div class="pt-4 pr-10">
+                            <button id="button-1" class="bg-blue-700 text-white rounded-lg py-2 px-6">Complete</button>
+                        </div>
+                </div>
+            </div>
+            <div class="rounded-lg pl-4" style="background-color:lightcyan; padding-top: 20px;" >
+                
+                <h1 class="text-black bg-white w-28 pl-4 pr-4 ml-4 text-lg py-2 rounded-lg">
+                    CloudSync
+                </h1>
+                <h1 id="low-2" class="text-black text-2xl ml-4 pt-3">
+                    Add Dark Mode
+                </h1>
+                
+                <div class="collapse bg-base-200 bg-white  mt-5 w-60">
+                    <input type="checkbox" />
+                    <div class="collapse-title text-stone-700">Store the user's preference in localStorage, update CSS </div>
+                    <div class="collapse-content text-stone-700">
+                      <p>Store the user's preference in localStorage, update CSS variables dynamically, and apply a smooth transition effect.</p>
+                    </div>
+                  </div>
+                <div class="flex gap-10 my-5 ml-4">
+                        <div>
+                            <span class="text-black">deadline</span> <br> <span class="font-bold text-black">28 July,2025</span>
+                        </div>
+                        <div class="pt-4 pr-10">
+                            <button id="button-2" class="bg-blue-700 text-white rounded-lg py-2 px-6">Complete</button>
+                        </div>
+                </div>
+            </div>
+            <div class="rounded-lg pl-4" style="background-color:lightcyan; padding-top: 20px;" >
+                
+                <h1 class="text-black bg-white w-28 pl-4 pr-4 ml-4 text-lg py-2 rounded-lg">
+                    SwiftPay
+                </h1>
+                <h1 id="low-3" class="text-black text-2xl ml-4 pt-3">
+                    Optimize  Home page 
+                </h1>
+                
+                <div class="collapse bg-base-200 bg-white  mt-5 w-60">
+                    <input type="checkbox" />
+                    <div class="collapse-title text-stone-700">Debug using Chrome DevTools, check for overlapping </div>
+                    <div class="collapse-content text-stone-700">
+                      <p>Debug using Chrome DevTools, check for overlapping elements, and ensure onClick works properly
+                        and ensure onClick works properly</p>
+                    </div>
+                  </div>
+                <div class="flex gap-10 my-5 ml-4">
+                        <div>
+                            <span class="text-black">deadline</span> <br> <span class="font-bold text-black">28 July,2025</span>
+                        </div>
+                        <div class="pt-4 pr-10">
+                            <button id="button-3" class="bg-blue-700 text-white rounded-lg py-2 px-6">Complete</button>
+                        </div>
+                </div>
+            </div>
+            <div class="rounded-lg pl-4" style="background-color:lightcyan; padding-top: 20px;" >
+                
+                <h1 class="text-black bg-white w-28 pl-4 pr-4 ml-4 text-lg py-2 rounded-lg">
+                    Meta
+                </h1>
+                <h1 id="low-4" class="text-black text-2xl ml-4 pt-3">
+                    Add new emoji 🤲
+                </h1>
+                
+                <div class="collapse bg-base-200 bg-white  mt-5 w-60">
+                    <input type="checkbox" />
+                    <div class="collapse-title text-stone-700">When adding a new emoji, debug using Chrome DevTools, check for overlapping </div>
+                    <div class="collapse-content text-stone-700">
+                      <p>elements, and ensure onClick works properly. Each step, from debugging to checking overlaps and verifying onClick, enhances the emoji's functionality and user experience. The precise execution of these features guarantees that the new emoji integrates seamlessly, enriching digital conversations and fostering better communication</p>
+                    </div>
+                  </div>
+                <div class="flex gap-10 my-5 ml-4">
+                        <div>
+                            <span class="text-black">deadline</span> <br> <span class="font-bold text-black">28 July,2025</span>
+                        </div>
+                        <div class="pt-4 pr-10">
+                            <button id="button-4" class="bg-blue-700 text-white rounded-lg py-2 px-6">Complete</button>
+                        </div>
+                </div>
+            </div>
+            <div class="rounded-lg pl-4" style="background-color:lightcyan; padding-top: 20px;" >
+                
+                <h1 class="text-black bg-white w-28 pl-4 pr-4 ml-4 text-lg py-2 rounded-lg">
+                    Google LLC
+                </h1>
+                <h1 id="low-5" class="text-black text-2xl ml-4 pt-3">
+                    Integrate OpenAI API 
+                </h1>
+                
+                <div class="collapse bg-base-200 bg-white  mt-5 w-60">
+                    <input type="checkbox" />
+                    <div class="collapse-title text-stone-700">Debug using Chrome DevTools, check for overlap...</div>
+                    <div class="collapse-content text-stone-700">
+                      <p>Debug using Chrome DevTools, check for overlapping elements, and ensure onClick works properly
+                        and ensure onClick works properly</p>
+                    </div>
+                  </div>
+                <div class="flex gap-10 my-5 ml-4">
+                        <div>
+                            <span class="text-black">deadline</span> <br> <span class="font-bold text-black">28 July,2025</span>
+                        </div>
+                        <div class="pt-4 pr-10">
+                            <button id="button-5" class="bg-blue-700 text-white rounded-lg py-2 px-6">Complete</button>
+                        </div>
+                </div>
+            </div>
+            <div class="rounded-lg pl-4" style="background-color:lightcyan; padding-top: 20px;" >
+                
+                <h1 class="text-black bg-white w-28 pl-4 pr-4 ml-4 text-lg py-2 rounded-lg">
+                    Glassdoar
+                </h1>
+                <h1 id="low-6" class="text-black text-2xl ml-4 pt-3">
+                    Improve Job searching 
+                </h1>
+                
+                <div class="collapse bg-base-200 bg-white  mt-5 w-60">
+                    <input type="checkbox" />
+                    <div class="collapse-title text-stone-700">Debug using Chrome DevTools, check for overlap...</div>
+                    <div class="collapse-content text-stone-700">
+                      <p>Debug using Chrome DevTools, check for overlapping elements, and ensure onClick works properly
+                        and ensure onClick works properly</p>
+                    </div>
+                  </div>
+                <div class="flex gap-10 my-5 ml-4 pr-10">
+                        <div>
+                            <span class="text-black">deadline</span> <br> <span class="font-bold text-black">28 July,2025</span>
+                        </div>
+                        <div class="pt-4 pr-10">
+                            <button id="button-6" class="bg-blue-700 text-white rounded-lg py-2 px-6">Complete</button>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- history -->
+    <section id="history" class="ml-8 mt-10 bg-white pt-4 mr-26 my-10 rounded-lg pr-4 col-span-2">
+        <div class="flex gap-4 pl-30 ">
+            <img class="w-6 h-10 pt-4" src="A5-Dev-Board/assets/activity.png" alt="">
+            <p class="pt-3 pr-6 text-black text-lg">Activity Log</p>
+        </div>
+        <div class="pl-34">
+            <button id="history-remover" class="btn bg-blue-700 text-white  mt-7 border-none ">
+                Clear History
+            </button>
+        </div>
+    </section>
+    </section>
+    <script src="index.js"></script>
+    <script src="innerindex.js"></script>
+</body>
+</html>
